@@ -1,6 +1,5 @@
 import React from 'react'
 import './css/main.css'
-import Styleguide from './pages/Styleguide/Styleguide'
 import HeaderRoutes from './components/Routes/HeaderRoutes'
 
 
