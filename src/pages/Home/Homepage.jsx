@@ -14,7 +14,7 @@ const Homepage = () => {
 
     revealAnim.set(header.current, {
       yPercent: 100,
-      duration: 1,
+      duration: .5,
       opacity: 0,
     });
     revealAnim.to(header.current, 1.5, {
