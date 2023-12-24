@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Nav from '../../pages/Nav/Nav'
-import NoPage from '../../pages/NoPage/NoPage'
+// import NoPage from '../../pages/NoPage/NoPage'
 import Homepage from '../../pages/Home/Homepage'
 
 
@@ -13,7 +13,7 @@ const HeaderRoutes = () => {
         <Nav />
         <Routes>
           <Route path="/" exact element={<Homepage />} />
-          <Route path="*" element={<NoPage />} />
+          {/* <Route path="*" element={<NoPage />} /> */}
         </Routes>
       </>
     </Router>
