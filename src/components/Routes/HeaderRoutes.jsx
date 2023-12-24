@@ -12,7 +12,7 @@ const HeaderRoutes = () => {
       <>
         <Nav />
         <Routes>
-          <Route path="/" index element={<Homepage />} />
+          <Route path="/" exact element={<Homepage />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </>
