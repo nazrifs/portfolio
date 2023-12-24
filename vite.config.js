@@ -9,4 +9,5 @@ export default defineConfig({
   resolve: {
     extensions: ['.js', '.jsx'], // Include '.jsx' extension
   },
+  base: "/portfolio",
 })
