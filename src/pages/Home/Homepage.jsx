@@ -2,11 +2,12 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { Helmet } from "react-helmet";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
+  const ogImagePath = process.env.PUBLIC.URL + "../../assets/img/social-media-graph-thumbnail.jpg";
   const header = useRef(null);
   const status = useRef(null);
 
@@ -26,6 +27,28 @@ const Homepage = () => {
   });
   return (
     <>
+    <Helmet>
+      <title>Nazri Fuad | Freelance Web Developer and Web Designer</title>
+      <meta name="description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad."/>
+      <link rel="canonical" href="https://www.nazrifs.com/" />
+
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
+      <meta property="og:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
+      <meta property="og:url" content="https://www.nazrifs.com/" />
+      <meta property="og:site_name" content="Nazri Fuad" />
+      <meta property="og:image:secure_url" content={ogImagePath} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Freelance Web Developer and Web Designer" />
+      <meta property="og:image:type" content="image/jpeg" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
+      <meta name="twitter:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
+      <meta name="twitter:image" content={ogImagePath}  />
+    </Helmet>
+
       <section className="section main-section full-height align">
         <div className="container">
           <div className="section-wrap align">
