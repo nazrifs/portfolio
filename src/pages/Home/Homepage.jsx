@@ -39,13 +39,13 @@ const Homepage = () => {
       <meta property="og:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
       <meta property="og:url" content="https://www.nazrifs.com/" />
       <meta property="og:site_name" content="Nazri Fuad" />
-      <meta property="og:image" content={ogImagePath} />
+      <meta property="og:image:secure_url" content="https://surge-v.com/wp-content/uploads/2023/11/Social-Graph-Surge-V-Limited-1.png" />
       <meta property="og:image:alt" content="Freelance Web Developer and Web Designer" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
       <meta name="twitter:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
-      <meta name="twitter:image" content={ogImagePath}  />
+      <meta name="twitter:image" content="https://surge-v.com/wp-content/uploads/2023/11/Social-Graph-Surge-V-Limited-1.png"  />
     </Helmet>
 
       <section className="section main-section full-height align">
