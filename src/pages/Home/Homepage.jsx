@@ -29,6 +29,9 @@ const Homepage = () => {
         <div className="container">
           <div className="section-wrap align">
             <div ref={header} className="general-heading-wrapper">
+            <div className="general-subtitle">
+                <p className="small">Based in Johor Bahru, Malaysia</p>
+              </div>
               <div className="general-big-desc">
                 <h2>
                   Get ready for a fresh, sleek, and immersive experience that
@@ -37,7 +40,6 @@ const Homepage = () => {
               </div>
               <div className="general-subtitle">
                 <p>Frontend Developer & UI Designer</p>
-                <p className="small">Based in Johor Bahru, Malaysia</p>
               </div>
             </div>
           </div>
