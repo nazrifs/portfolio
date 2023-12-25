@@ -34,7 +34,11 @@ const Homepage = () => {
       <meta name="description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad."/>
       <link rel="canonical" href={currentURL} />
 
-      <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/nazrifs/portfolio/main/src/assets/img/social-media-graph-thumbnail.jpg" />
+      <meta property="og:image" content="https://raw.githubusercontent.com/nazrifs/portfolio/main/src/assets/img/social-media-graph-thumbnail.jpg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content="Freelance Web Developer and Web Designer" />
+      <meta property="og:image:type" content="image/jpg" />
 
     </Helmet>
 
