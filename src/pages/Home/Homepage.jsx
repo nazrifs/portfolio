@@ -30,7 +30,7 @@ const Homepage = () => {
           <div className="section-wrap align">
             <div ref={header} className="general-heading-wrapper">
             <div className="general-subtitle">
-                <p className="small">Based in Johor Bahru, Malaysia</p>
+              <p>Frontend Developer & UI Designer</p>
               </div>
               <div className="general-big-desc">
                 <h2>
@@ -39,7 +39,7 @@ const Homepage = () => {
                 </h2>
               </div>
               <div className="general-subtitle">
-                <p>Frontend Developer & UI Designer</p>
+                <p className="small">Based in Johor Bahru, Malaysia</p>
               </div>
             </div>
           </div>
