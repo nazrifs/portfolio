@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
-  const ogImagePath = process.env.PUBLIC.URL + "../assets/img/social-media-graph-thumbnail.jpg";
+  const ogImagePath = process.env.PUBLIC.URL + "./assets/img/social-media-graph-thumbnail.jpg";
   const header = useRef(null);
   const status = useRef(null);
 
