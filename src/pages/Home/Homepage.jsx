@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,42 +10,28 @@ gsap.registerPlugin(ScrollTrigger);
 const Homepage = () => {
   const header = useRef(null);
   const status = useRef(null);
-  const currentURL = 'https://www.nazrifs.com/';
-  const encodedURL = encodeURIComponent(currentURL);
 
   useEffect(() => {
     const revealAnim = gsap.timeline();
-
+  
     revealAnim.set(header.current, {
       yPercent: 100,
-      duration: .5,
+      duration: 0.5,
       opacity: 0,
     });
     revealAnim.to(header.current, 1.5, {
       yPercent: 0,
       opacity: 1,
     });
+  }, []);
 
-  });
   return (
     <>
+    
     <Helmet>
       <title>Nazri Fuad | Freelance Web Developer and Web Designer</title>
       <meta name="description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad."/>
-      <link rel="canonical" href={encodedURL} />
-
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
-      <meta property="og:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
-      <meta property="og:url" content="https://www.nazrifs.com/" />
-      <meta property="og:site_name" content="Nazri Fuad" />
-      <meta property="og:image:secure_url" content="https://surge-v.com/wp-content/uploads/2023/11/Social-Graph-Surge-V-Limited-1.png" />
-      <meta property="og:image:alt" content="Freelance Web Developer and Web Designer" />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
-      <meta name="twitter:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
-      <meta name="twitter:image" content="https://surge-v.com/wp-content/uploads/2023/11/Social-Graph-Surge-V-Limited-1.png"  />
+      <link rel="canonical" href="/homepage" />
     </Helmet>
 
       <section className="section main-section full-height align">
