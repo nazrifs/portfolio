@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Homepage = () => {
   const header = useRef(null);
   const status = useRef(null);
+  const currentURL = 'https://www.nazrifs.com/';
+  const encodedURL = encodeURIComponent(currentURL);
 
   useEffect(() => {
     const revealAnim = gsap.timeline();
@@ -30,7 +32,7 @@ const Homepage = () => {
     <Helmet>
       <title>Nazri Fuad | Freelance Web Developer and Web Designer</title>
       <meta name="description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad."/>
-      <link rel="canonical" href="https://www.nazrifs.com/" />
+      <link rel="canonical" href={encodedURL} />
 
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
