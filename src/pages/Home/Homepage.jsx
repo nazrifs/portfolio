@@ -8,7 +8,7 @@ import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
-  const ogImagePathUrl = process.env.PUBLIC.URL + ogImagePath;
+  const ogImagePathUrl = process.env.PUBLIC + ogImagePath;
   const header = useRef(null);
   const status = useRef(null);
 
