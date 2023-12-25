@@ -3,15 +3,14 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet-async";
-import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
+// import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Homepage = () => {
   const header = useRef(null);
   const status = useRef(null);
-  const currentURL = "https://www.nazrifs.com/";
-  const encodedURL = encodeURIComponent(currentURL);
+  const currentURL = "https://www.nazrifs.com";
 
   useEffect(() => {
     const revealAnim = gsap.timeline();
@@ -33,9 +32,9 @@ const Homepage = () => {
     <Helmet>
       <title>Nazri Fuad | Freelance Web Developer and Web Designer</title>
       <meta name="description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad."/>
-      <link rel="canonical" href={encodedURL} />
+      <link rel="canonical" href={currentURL} />
 
-      <meta property="og:image:secure_url" content={[encodedURL, ogImagePath]} />
+      <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/nazrifs/portfolio/main/src/assets/img/social-media-graph-thumbnail.jpg" />
 
     </Helmet>
 
