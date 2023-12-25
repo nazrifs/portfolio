@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import * as contentful from "contentful";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
@@ -13,6 +13,35 @@ const Homepage = () => {
   const status = useRef(null);
   const currentURL = "https://www.nazrifs.com";
 
+  // cms
+  const [heroTitle, setHeroTitle] = useState(""); 
+  const [heroPosition, setHeroPosition] = useState(""); 
+  const [heroLocation, setHeroLocation] = useState(""); 
+
+  useEffect(() => {
+    // Initialize Contentful client
+    const client = contentful.createClient({
+      space: "36suaoi9oex6",
+      accessToken: "AOI_FoxogIG2UwWTESY3oIGQ4tkG8qM0IhS0-miVujA",
+    });
+
+    // Fetch content from Contentful
+    client.getEntries({ content_type: "homepage" })
+      .then((response) => {
+        // Assuming there is only one entry for the homepage content type
+        const homepageEntry = response.items[0];
+        
+        // Update state with the hero title from Contentful
+        setHeroTitle(homepageEntry.fields.heroTitle || "");
+        setHeroPosition(homepageEntry.fields.heroPosition || "");
+        setHeroLocation(homepageEntry.fields.heroLocation || "");
+      })
+      .catch((error) => {
+        console.error("Error fetching Contentful data:", error);
+      });
+  }, []);
+
+  // animation
   useEffect(() => {
     const revealAnim = gsap.timeline();
   
@@ -26,28 +55,6 @@ const Homepage = () => {
       opacity: 1,
     });
   }, []);
-
-
-  // cms contentful
-  const [subtitle, setSubtitle] = useState("");
-
-  useEffect(() => {
-    const client = contentful.createClient({
-      space: '36suaoi9oex6',
-      accessToken: 'AOI_FoxogIG2UwWTESY3oIGQ4tkG8qM0IhS0-miVujA',
-    });
-
-    client
-      .getEntries({
-        content_type: 'homepage', // Replace with your content type ID
-      })
-      .then((response) => {
-        const entry = response.items[0]; // Assuming you have only one entry for the homepage
-        setSubtitle(entry.fields.subtitle);
-      })
-      .catch(console.error);
-  }, []);
-
 
   return (
     <>
@@ -74,17 +81,14 @@ const Homepage = () => {
         <div className="container">
           <div className="section-wrap align">
             <div ref={header} className="general-heading-wrapper">
-              <div className="general-subtitle" style={{marginBottom: 1 + 'em'}}>
-                <p>{subtitle}</p>
+              <div className="general-subtitle">
+                <p>{heroPosition}</p>
               </div>
               <div className="general-big-desc">
-                <h2>
-                  Get ready for a fresh, sleek, and immersive experience that
-                  truly reflects my passion and skills. Stay tuned!
-                </h2>
+                <h2>{heroTitle}</h2>
               </div>
               <div className="general-subtitle">
-                <p className="small">Based in Johor Bahru, Malaysia</p>
+                <p className="small">{heroLocation}</p>
               </div>
             </div>
           </div>
