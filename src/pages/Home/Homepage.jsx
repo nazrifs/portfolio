@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet";
-// import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
+import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,11 +39,13 @@ const Homepage = () => {
       <meta property="og:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
       <meta property="og:url" content="https://www.nazrifs.com/" />
       <meta property="og:site_name" content="Nazri Fuad" />
+      <meta property="og:image" content={ogImagePath} />
       <meta property="og:image:alt" content="Freelance Web Developer and Web Designer" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
       <meta name="twitter:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
+      <meta name="twitter:image" content={ogImagePath}  />
     </Helmet>
 
       <section className="section main-section full-height align">
