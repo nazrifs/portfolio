@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import * as contentful from "contentful";
 import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -26,6 +27,28 @@ const Homepage = () => {
     });
   }, []);
 
+
+  // cms contentful
+  const [subtitle, setSubtitle] = useState("");
+
+  useEffect(() => {
+    const client = contentful.createClient({
+      space: '36suaoi9oex6',
+      accessToken: 'AOI_FoxogIG2UwWTESY3oIGQ4tkG8qM0IhS0-miVujA',
+    });
+
+    client
+      .getEntries({
+        content_type: 'homepage', // Replace with your content type ID
+      })
+      .then((response) => {
+        const entry = response.items[0]; // Assuming you have only one entry for the homepage
+        setSubtitle(entry.fields.subtitle);
+      })
+      .catch(console.error);
+  }, []);
+
+
   return (
     <>
     
@@ -52,7 +75,7 @@ const Homepage = () => {
           <div className="section-wrap align">
             <div ref={header} className="general-heading-wrapper">
               <div className="general-subtitle" style={{marginBottom: 1 + 'em'}}>
-                <p>Frontend Developer & UI Designer</p>
+                <p>{subtitle}</p>
               </div>
               <div className="general-big-desc">
                 <h2>
