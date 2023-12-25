@@ -37,6 +37,7 @@ const Homepage = () => {
               </div>
               <div className="general-subtitle">
                 <p>Frontend Developer & UI Designer</p>
+                <p className="small">Based in Johor Bahru, Malaysia</p>
               </div>
             </div>
           </div>
