@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Helmet } from "react-helmet-async";
-// import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
+import ogImagePath from "../../assets/img/social-media-graph-thumbnail.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,7 +20,7 @@ const Homepage = () => {
       duration: 0.5,
       opacity: 0,
     });
-    revealAnim.to(header.current, 1.5, {
+    revealAnim.to(header.current, 0.7, {
       yPercent: 0,
       opacity: 1,
     });
@@ -34,11 +34,16 @@ const Homepage = () => {
       <meta name="description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad."/>
       <link rel="canonical" href={currentURL} />
 
-      <meta property="og:image" content="https://raw.githubusercontent.com/nazrifs/portfolio/main/src/assets/img/social-media-graph-thumbnail.jpg" />
+      <meta property="og:image" content={ogImagePath} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content="Freelance Web Developer and Web Designer" />
       <meta property="og:image:type" content="image/jpg" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Nazri Fuad | Freelance Web Developer and Web Designer" />
+      <meta name="twitter:description" content="A creative frontend developer and freelance web designer based in Johor Bahru. Crafted by Nazri Fuad." />
+      <meta name="twitter:image" content={ogImagePath}  />
 
     </Helmet>
 
@@ -46,8 +51,8 @@ const Homepage = () => {
         <div className="container">
           <div className="section-wrap align">
             <div ref={header} className="general-heading-wrapper">
-            <div className="general-subtitle">
-              <p>Frontend Developer & UI Designer</p>
+              <div className="general-subtitle" style={{marginBottom: 1 + 'em'}}>
+                <p>Frontend Developer & UI Designer</p>
               </div>
               <div className="general-big-desc">
                 <h2>

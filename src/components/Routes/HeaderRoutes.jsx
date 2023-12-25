@@ -22,4 +22,3 @@ const HeaderRoutes = () => {
 
 export default HeaderRoutes
 
-
