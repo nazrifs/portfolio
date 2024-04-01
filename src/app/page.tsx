@@ -28,15 +28,15 @@ import SmartXLogo from "./assets/img/smart-x-sdn-bhd-logo.svg";
 import RxClickLogo from "./assets/img/rx-click-logo.svg";
 import ZtiqLogo from "./assets/img/ztiq-marine-logo.svg";
 
-export function getCurrentYear() {
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  return currentYear;
-}
+// export function getCurrentYear() {
+//   const currentDate = new Date();
+//   const currentYear = currentDate.getFullYear();
+//   return currentYear;
+// }
 
 export default function Home() {
   // display current year
-  const currentYear = getCurrentYear();
+  // const currentYear = getCurrentYear();
 
   // swiper configuration
   useEffect(() => {
@@ -197,7 +197,7 @@ export default function Home() {
                         <span>Fuad</span>
                       </h2>
                       <div className="year-wrapper">
-                        © <span>{currentYear}</span>{" "}
+                        © <span>2024</span>
                       </div>
                     </div>
                   </div>
