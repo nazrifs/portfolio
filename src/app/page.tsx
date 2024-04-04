@@ -28,6 +28,8 @@ import SmartXLogo from "./assets/img/smart-x-sdn-bhd-logo.svg";
 import RxClickLogo from "./assets/img/rx-click-logo.svg";
 import ZtiqLogo from "./assets/img/ztiq-marine-logo.svg";
 
+import PrevBtn from "./component/ui/prevBtn";
+
 // export function getCurrentYear() {
 //   const currentDate = new Date();
 //   const currentYear = currentDate.getFullYear();
@@ -212,31 +214,7 @@ export default function Home() {
                       {/* project nav button */}
                       <div className="custom-nav-wrapper projects-home">
                         <div className="btn custom-button-prev">
-                          <svg id="Group_16" data-name="Group 16" xmlns="http://www.w3.org/2000/svg" width="50" height="39" viewBox="0 0 50 39">
-                            <rect id="Rectangle_4" data-name="Rectangle 4" width="50" height="39" fill="#6b6b6b" />
-                            <g id="arrow-right-outline" transform="translate(8.669 12.373)">
-                              <path
-                                id="Path_15"
-                                data-name="Path 15"
-                                d="M56.344,96.019,24,96"
-                                transform="translate(-23.681 -88.876)"
-                                fill="none"
-                                stroke="#ebebe8"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                              />
-                              <path
-                                id="Path_16"
-                                data-name="Path 16"
-                                d="M122.648,54.254,112.1,47.127,122.648,40"
-                                transform="translate(-112.1 -40)"
-                                fill="none"
-                                stroke="#ebebe8"
-                                strokeLinejoin="bevel"
-                                strokeWidth="2"
-                              />
-                            </g>
-                          </svg>
+                          <PrevBtn />
                         </div>
                         <div className="btn custom-button-next">
                           <svg id="Group_18" data-name="Group 18" xmlns="http://www.w3.org/2000/svg" width="50" height="39" viewBox="0 0 50 39">
