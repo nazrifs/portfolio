@@ -28,7 +28,7 @@ import SmartXLogo from "./assets/img/smart-x-sdn-bhd-logo.svg";
 import RxClickLogo from "./assets/img/rx-click-logo.svg";
 import ZtiqLogo from "./assets/img/ztiq-marine-logo.svg";
 
-import PrevBtn from "./component/ui/prevBtn";
+import PrevBtn from "./components/ui/prevBtn";
 
 // export function getCurrentYear() {
 //   const currentDate = new Date();
