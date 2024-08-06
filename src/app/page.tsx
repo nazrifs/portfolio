@@ -29,13 +29,14 @@ import AfShipLogo from "./assets/img/af-ship-management-logo.svg";
 import SmartXLogo from "./assets/img/smart-x-sdn-bhd-logo.svg";
 import RxClickLogo from "./assets/img/rx-click-logo.svg";
 import ZtiqLogo from "./assets/img/ztiq-marine-logo.svg";
-import PrevBtn from "./components/ui/prevBtn";
-import NextBtn from "./components/ui/nextBtn";
-import Preloader from "./components/ui/Preloader";
-import CopyrightYear from "./components/ui/CopyrightYear";
-import ClientItem from "./components/clientItem/ClientItem";
 
-// import PrevBtn from "./component/ui/prevBtn";
+import PrevBtn from "./components/ui/prevBtn";
+
+// export function getCurrentYear() {
+//   const currentDate = new Date();
+//   const currentYear = currentDate.getFullYear();
+//   return currentYear;
+// }
 
 export default function Home() {
   // swiper configuration
