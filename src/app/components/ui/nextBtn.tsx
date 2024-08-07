@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function PrevBtn() {
+export default function NextBtn() {
   return (
     <div>
       <svg
-        id="Group_16"
-        data-name="Group 16"
+        id="Group_18"
+        data-name="Group 18"
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="39"
@@ -22,8 +22,8 @@ export default function PrevBtn() {
           <path
             id="Path_15"
             data-name="Path 15"
-            d="M56.344,96.019,24,96"
-            transform="translate(-23.681 -88.876)"
+            d="M24,96.019,56.344,96"
+            transform="translate(-24 -88.876)"
             fill="none"
             stroke="#ebebe8"
             strokeLinejoin="round"
@@ -32,8 +32,8 @@ export default function PrevBtn() {
           <path
             id="Path_16"
             data-name="Path 16"
-            d="M122.648,54.254,112.1,47.127,122.648,40"
-            transform="translate(-112.1 -40)"
+            d="M112.1,54.254l10.548-7.127L112.1,40"
+            transform="translate(-89.986 -40)"
             fill="none"
             stroke="#ebebe8"
             strokeLinejoin="bevel"
